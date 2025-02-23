@@ -1,0 +1,28 @@
+/* Reset some default styles */
+body {
+    margin: 0;
+    display: flex;
+}
+
+/* Side menu styles */
+.sidemenu {
+    width: 50px; /* Adjust width as needed */
+    height: 100vh; /* Full height */
+    background-color: #f4f4f4; /* Light background */
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling the links */
+.links a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: rgb(255, 153, 0);
+}
+
+/* Main content styles */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
