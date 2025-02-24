@@ -1,18 +1,16 @@
-const sidemenu = document.querySelector(".sidemenu");
-const hoverArea = document.createElement("div");
+window.onload = function() {
+    const sidemenu = document.querySelector(".sidemenu");
+    const hoverArea = document.querySelector(".hover-area");
+    const content = document.querySelector(".content");
+    const container = document.querySelector(".container");
 
-hoverArea.style.position = "fixed";
-hoverArea.style.top = "0";
-hoverArea.style.left = "0";
-hoverArea.style.width = "20px"; // Small invisible trigger area
-hoverArea.style.height = "100vh";
-hoverArea.style.background = "transparent";
-document.body.appendChild(hoverArea);
-
-hoverArea.addEventListener("mouseenter", () => {
-    sidemenu.style.left = "0";
-});
-
-sidemenu.addEventListener("mouseleave", () => {
-    sidemenu.style.left = "-200px";
-});
+    hoverArea.addEventListener("mouseenter", () => {
+        sidemenu.style.left = "0"; 
+        container.style.marginLeft = "200px"; // Shift entire content
+    });
+    
+    sidemenu.addEventListener("mouseleave", () => {
+        sidemenu.style.left = "-200px"; 
+        container.style.marginLeft = "0"; // Move back
+    });
+};

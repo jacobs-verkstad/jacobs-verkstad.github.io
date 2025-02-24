@@ -14,35 +14,44 @@ body {
 .sidemenu {
     width: 200px; /* Adjust width as needed */
     height: 100vh; /* Full height */
-    background-color: rgb(223, 145, 0); /* Orange background */
+    background-color: rgb(0, 148, 227); /* Orange background */
+    border: 12px rgb(128, 172, 255);
     padding: 20px;
     position: fixed; /* Fix it to the left side */
     top: 0;
     left: -200px; /* Hide menu off-screen */
-    transition: left 0.3s ease-in-out;
+    transition: left 1s ease-in-out;
 }
 
-/* Styling the links */
 .links a {
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     text-decoration: none;
-    color: white; /* White text for better contrast */
+    color: rgb(252, 146, 25); /* Orange text */
     font-weight: bold;
+    text-shadow: 3px 3px 5px rgba(63, 35, 16, 0.756); /* Slight shadow for depth */
 }
+
+.container {
+    display: flex;
+    flex-direction: column; /* Ensures content flows normally */
+    transition: margin-left 1s ease-in-out;
+}
+
 
 /* Push main content to the right */
 .content {
     padding: 20px;
     flex-grow: 1;
+    transition: left 1s ease-in-out;
 }
 
-/* Hover area to trigger the menu 
+/* Hover area to trigger the menu */
 .hover-area {
     position: fixed;
     top: 0;
     left: 0;
-    width: 200px; /* Small trigger zone 
+    width: 200px; /* Small trigger zone */
     height: 100vh;
     background: transparent;
-} */
+} 
