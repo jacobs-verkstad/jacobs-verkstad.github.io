@@ -1,28 +1,48 @@
-/* Reset some default styles */
-body {
+/* Reset default margin and padding */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Make body a flex container */
+body {
     display: flex;
 }
 
-/* Side menu styles */
+/* Side menu styles (Initially Hidden) */
 .sidemenu {
-    width: 50px; /* Adjust width as needed */
+    width: 200px; /* Adjust width as needed */
     height: 100vh; /* Full height */
-    background-color: #f4f4f4; /* Light background */
+    background-color: rgb(223, 145, 0); /* Orange background */
     padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fix it to the left side */
+    top: 0;
+    left: -200px; /* Hide menu off-screen */
+    transition: left 0.3s ease-in-out;
 }
 
 /* Styling the links */
 .links a {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     text-decoration: none;
-    color: rgb(255, 153, 0);
+    color: white; /* White text for better contrast */
+    font-weight: bold;
 }
 
-/* Main content styles */
+/* Push main content to the right */
 .content {
-    flex-grow: 1;
     padding: 20px;
+    flex-grow: 1;
 }
+
+/* Hover area to trigger the menu 
+.hover-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px; /* Small trigger zone 
+    height: 100vh;
+    background: transparent;
+} */
