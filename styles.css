@@ -8,13 +8,14 @@
 /* Make body a flex container */
 body {
     display: flex;
+    background-color: rgba(255, 184, 133, 0.783);
 }
 
 /* Side menu styles (Initially Hidden) */
 .sidemenu {
     width: 200px; /* Adjust width as needed */
     height: 100vh; /* Full height */
-    background-color: rgb(0, 148, 227); /* Orange background */
+    background-color: rgb(83, 184, 238); /* Orange background */
     border: 12px rgb(128, 172, 255);
     padding: 20px;
     position: fixed; /* Fix it to the left side */
@@ -27,7 +28,7 @@ body {
     display: block;
     margin-bottom: 25px;
     text-decoration: none;
-    color: rgb(252, 146, 25); /* Orange text */
+    color: rgb(255, 136, 0); /* Orange text */
     font-weight: bold;
     text-shadow: 3px 3px 5px rgba(63, 35, 16, 0.756); /* Slight shadow for depth */
 }
@@ -45,6 +46,16 @@ body {
     flex-grow: 1;
     transition: left 1s ease-in-out;
 }
+
+.slideshow {
+    transition: opacity 1s ease-in-out;
+}
+
+.slideshow img {
+    width: 100%; /* Make sure it fills the container */
+    height: 500px; /* Set a fixed height */
+}
+
 
 /* Hover area to trigger the menu */
 .hover-area {
